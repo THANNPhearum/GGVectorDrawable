@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- fix -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+
+
+    <dimen name="bar_color_height">72dp</dimen>
+    <!-- Icon Size -->
+    <dimen name="ic_size_small">48dp</dimen>
+    <dimen name="ic_size_medium">72dp</dimen>
+    <dimen name="ic_size_large">96dp</dimen>
+    <dimen name="ic_size_extra_large">144dp</dimen>
+
+</resources>
