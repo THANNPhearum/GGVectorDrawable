@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/margin_small"
-                        android:src="@drawable/ic_person" />
+                        android:src="@mipmap/ic_launcher" />
 
 
                 </LinearLayout>
