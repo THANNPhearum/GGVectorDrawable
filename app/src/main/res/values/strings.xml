@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">GGVectorDrawable</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="vector_size_small">48 dp</string>
-    <string name="vector_size_medium">72 dp</string>
-    <string name="vector_size_large">96 dp</string>
-    <string name="vector_size_extra_large">144 dp</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="contextual">Small Contextual</string>
+    <string name="launcher">Launcher</string>
+    <string name="actionbar">Actionbar</string>
+    <string name="notification">Notification</string>
 </resources>

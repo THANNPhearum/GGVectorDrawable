@@ -2,53 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/home/thannphearum/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-4e6bed007d938dbdad6fd95f401769ee157c41c7.jar" />
-    </item>
-    <item
-        jar="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-cd63ca34a5efe0a9dabb873e8ae3be64d31875b8.jar" />
-    </item>
-    <item
         jar="/home/thannphearum/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-51fd77a935a98b1c31ce3172c9ea6d2dbb0426c1.jar" />
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-51fd77a935a98b1c31ce3172c9ea6d2dbb0426c1.jar" />
     </item>
     <item
-        jar="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-bcfb0b6c5c96b37586279183086fa340dfc890f4.jar" />
-    </item>
-    <item
-        jar="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jar="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-7a88dc42173a79eb63a9c7be695f828a3dd41936.jar" />
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-e793011944326b8f593656306972e086238e7994.jar" />
     </item>
     <item
-        jar="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jar="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-e451446cd081d4b31486b1428b5b36c48b7bad55.jar" />
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-aa1e82cf06de5379751ab4f733722c1336a2146e.jar" />
     </item>
     <item
-        jar="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
+        jar="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-3bf347d1dc6a51b99cd36c1e47755ebfdcb78a86.jar" />
+    </item>
+    <item
+        jar="/home/thannphearum/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-4e6bed007d938dbdad6fd95f401769ee157c41c7.jar" />
+    </item>
+    <item
+        jar="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="/home/thannphearum/projects/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-59c75f5caaa81376357623dae8d5102bae899e30.jar" />
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-2d95eb0b05a1a40a9ddf5b617770ee2dba200570.jar" />
+    </item>
+    <item
+        jar="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/classes-1743db6963b8232175925f206c4c757181a8d6bc.jar" />
+    </item>
+    <item
+        jar="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/home/thannphearum/projects/assignment/GGVectorDrawable/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-ae7a67c1aefc8cb17751e9358b5ecc0ef6b1e4a3.jar" />
     </item>
 
 </items>

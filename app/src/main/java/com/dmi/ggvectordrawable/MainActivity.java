@@ -1,128 +1,86 @@
 package com.dmi.ggvectordrawable;
 
 import android.graphics.ColorFilter;
-import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
+import android.support.v7.widget.Toolbar;
+import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.btn_vector_small)
-    Button btnSmall;
-    @Bind(R.id.btn_vector_medium)
-    Button btnMedium;
-    @Bind(R.id.btn_vector_large)
-    Button btnLarge;
-    @Bind(R.id.btn_vector_extra_large)
-    Button btnExtraLarge;
+    private final int W = 0;
+    private final int H = 1;
+    @Bind(R.id.img_mdpi)
+    ImageView imgMdpi;
+    @Bind(R.id.img_hdpi)
+    ImageView imgHdpi;
+    @Bind(R.id.img_xhdpi)
+    ImageView imgXhdpi;
+    @Bind(R.id.img_xxhdpi)
+    ImageView imgXxhdpi;
 
-    @Bind(R.id.img_mic)
-    ImageView imgMic;
-    @Bind(R.id.img_album)
-    ImageView imgAlbum;
-    @Bind(R.id.img_radio)
-    ImageView imgRadio;
-    @Bind(R.id.img_vcam)
-    ImageView imgCam;
+
+    @Bind(R.id.txt_info_mdpi)
+    TextView txtInfoMdpi;
+    @Bind(R.id.txt_info_hdpi)
+    TextView txtInfohdpi;
+    @Bind(R.id.txt_info_xhdpi)
+    TextView txtInfoXhdpi;
+    @Bind(R.id.txt_info_xxhdpi)
+    TextView txtInfoXxhdpi;
+    @Bind(R.id.txt_info_devices)
+    TextView txtInfoDevices;
+
+
+    private Menu m;
+    private int pixel;
+    private String density;
+    private String model;
+    private int[] screen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ButterKnife.bind(this);
+        model = Util.getDeviceName();
+        pixel = getResources().getDisplayMetrics().densityDpi;
+        density = Util.getDensityName(this);
+        screen = Util.getResolution(getWindowManager());
 
-        btnSmall.setOnClickListener(this);
-        btnMedium.setOnClickListener(this);
-        btnLarge.setOnClickListener(this);
-        btnExtraLarge.setOnClickListener(this);
+        imgMdpi.setImageResource(R.drawable.ic_person);
+        imgHdpi.setImageResource(R.drawable.ic_laptop);
+        imgXhdpi.setImageResource(R.drawable.ic_gamepad);
+        imgXxhdpi.setImageResource(R.drawable.ic_cake);
+        updateInfo();
     }
 
-    private int getDimenSize(int id) {
-        return (int) (getResources().getDimension(id) / getResources().getDisplayMetrics().density);
-    }
 
-
-    private void resize(final ImageView imageView, final int size) {
-        runOnUiThread(new Runnable() {
+    private void updateInfo() {
+        txtInfoMdpi.postDelayed(new Runnable() {
             @Override
             public void run() {
-                imageView.getLayoutParams().width = getDimenSize(size);
-                imageView.getLayoutParams().height = getDimenSize(size);
-                imageView.requestLayout();
+                txtInfoDevices.setText(String.format("Model: %s\nResolution: %dx%d\nDensity: %s, %d dpi", model, screen[W], screen[H], density, pixel));
+                txtInfoMdpi.setText(String.format("Size: %dx%d px", imgMdpi.getWidth(), imgMdpi.getHeight()));
+                txtInfohdpi.setText(String.format("Size: %dx%d px", imgHdpi.getWidth(), imgHdpi.getHeight()));
+                txtInfoXhdpi.setText(String.format("Size: %dx%d px", imgXhdpi.getWidth(), imgXhdpi.getHeight()));
+                txtInfoXxhdpi.setText(String.format("Size: %dx%d px", imgXxhdpi.getWidth(), imgXxhdpi.getHeight()));
+
             }
-        });
+        }, 1000L);
     }
 
-    private void colorFilter(final ImageView imageView, final int color) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                int highlightColor = getResources().getColor(color);
-                ColorFilter filter = new PorterDuffColorFilter(highlightColor, PorterDuff.Mode.SRC_ATOP);
-                imageView.setColorFilter(filter);
-            }
-        });
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_vector_small:
-
-                resize(imgMic, R.dimen.ic_size_small);
-                resize(imgAlbum, R.dimen.ic_size_small);
-                resize(imgRadio, R.dimen.ic_size_small);
-                resize(imgCam, R.dimen.ic_size_small);
-                //color
-                colorFilter(imgMic, R.color.color_red);
-                colorFilter(imgAlbum, R.color.color_red);
-                colorFilter(imgRadio, R.color.color_red);
-                colorFilter(imgCam, R.color.color_red);
-                break;
-            case R.id.btn_vector_medium:
-                resize(imgMic, R.dimen.ic_size_medium);
-                resize(imgAlbum, R.dimen.ic_size_medium);
-                resize(imgRadio, R.dimen.ic_size_medium);
-                resize(imgCam, R.dimen.ic_size_medium);
-                //color
-                colorFilter(imgMic, R.color.color_pink);
-                colorFilter(imgAlbum, R.color.color_pink);
-                colorFilter(imgRadio, R.color.color_pink);
-                colorFilter(imgCam, R.color.color_pink);
-                break;
-            case R.id.btn_vector_large:
-                resize(imgMic, R.dimen.ic_size_large);
-                resize(imgAlbum, R.dimen.ic_size_large);
-                resize(imgRadio, R.dimen.ic_size_large);
-                resize(imgCam, R.dimen.ic_size_large);
-                //color
-                colorFilter(imgMic, R.color.color_puple);
-                colorFilter(imgAlbum, R.color.color_puple);
-                colorFilter(imgRadio, R.color.color_puple);
-                colorFilter(imgCam, R.color.color_puple);
-                break;
-            case R.id.btn_vector_extra_large:
-                resize(imgMic, R.dimen.ic_size_extra_large);
-                resize(imgAlbum, R.dimen.ic_size_extra_large);
-                resize(imgRadio, R.dimen.ic_size_extra_large);
-                resize(imgCam, R.dimen.ic_size_extra_large);
-                //color
-                colorFilter(imgMic, R.color.color_brown);
-                colorFilter(imgAlbum, R.color.color_brown);
-                colorFilter(imgRadio, R.color.color_brown);
-                colorFilter(imgCam, R.color.color_brown);
-                break;
-        }
-    }
 }

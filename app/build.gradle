@@ -1,4 +1,16 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.trello:victor:0.1.4'
+    }
+}
+
+
 apply plugin: 'com.android.application'
+// Make sure to apply this plugin *after* the Android plugin
+apply plugin: 'com.trello.victor'
 
 android {
     compileSdkVersion 22
@@ -6,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId "com.dmi.ggvectordrawable"
-        minSdkVersion 21
+        minSdkVersion 9
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -17,14 +29,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // Define the 'svg' source set for any flavors/build types and/or 'main' for all of them
+    sourceSets {
+        main {
+            svg.srcDir 'src/main/svg'
+        }
+    }
 }
+victor {
+    // Any assets defined in relative terms needs a base DPI specified
+    svgDpi = 72
 
+    // Do not generate these densities for SVG assets
+    excludeDensities = [ 'ldpi', 'xxxhdpi' ]
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:cardview-v7:22.0.+'
     compile 'com.android.support:design:22.2.1'
     compile 'com.jakewharton:butterknife:7.0.1'
-
+    compile 'de.hdodenhof:circleimageview:1.3.0'
 
 }

@@ -1,17 +1,32 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- fix -->
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
 
+    <!-- Launcher -->
+    <dimen name="ic_launcher_m">48dp</dimen>
+    <dimen name="ic_launcher_h">72dp</dimen>
+    <dimen name="ic_launcher_xh">96dp</dimen>
+    <dimen name="ic_launcher_xxh">144dp</dimen>
+    <dimen name="ic_launcher_xxxh">192dp</dimen>
+    <!-- Notification -->
+    <dimen name="ic_notification_m">24dp</dimen>
+    <dimen name="ic_notification_h">36dp</dimen>
+    <dimen name="ic_notification_xh">48dp</dimen>
+    <dimen name="ic_notification_xxh">72dp</dimen>
+    <dimen name="ic_notification_xxxh">96dp</dimen>
+    <!-- Actionbar -->
+    <dimen name="ic_actionbar_m">32dp</dimen>
+    <dimen name="ic_actionbar_h">48dp</dimen>
+    <dimen name="ic_actionbar_xh">64dp</dimen>
+    <dimen name="ic_actionbar_xxh">96dp</dimen>
+    <dimen name="ic_actionbar_xxxh">128dp</dimen>
+    <!-- Contextual -->
+    <dimen name="ic_contextual_m">16dp</dimen>
+    <dimen name="ic_contextual_h">24dp</dimen>
+    <dimen name="ic_contextual_xh">32dp</dimen>
+    <dimen name="ic_contextual_xxh">48dp</dimen>
+    <dimen name="ic_contextual_xxxh">64dp</dimen>
 
-    <dimen name="bar_color_height">72dp</dimen>
-    <!-- Icon Size -->
-    <dimen name="ic_size_small">48dp</dimen>
-    <dimen name="ic_size_medium">72dp</dimen>
-    <dimen name="ic_size_large">96dp</dimen>
-    <dimen name="ic_size_extra_large">144dp</dimen>
 
 </resources>
